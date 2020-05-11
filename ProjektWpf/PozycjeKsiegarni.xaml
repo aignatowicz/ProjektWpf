@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:ProjektWpf"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PozycjeKsiegarni"  Height="500" Width="350" >
+      Title="PozycjeKsiegarni"  Height="450" Width="800" >
 
   
         <Grid>
@@ -23,7 +23,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="150"/>
                 </Grid.ColumnDefinitions>
-                <ListBox Name="BoxList" Grid.Column="0" Margin="5,5,73,5.4" Grid.ColumnSpan="2">
+                <ListBox Name="BoxList" Grid.Column="0" Margin="10 0 0 0">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Grid Margin="0,0,0,0">
@@ -36,11 +36,11 @@
 
 
                                 </Grid.ColumnDefinitions>
-                                <TextBlock Grid.Column="0" Text="{Binding Name}" Name="BindingName" />
-                                <TextBlock Grid.Column="2" Text="{Binding Surname}" Name="BindingSurName" />
-                                <TextBlock Grid.Column="4" Text="{Binding Email}" Name="BindingEmail" />
+                            <TextBlock Grid.Column="0" Text="Tytuł"/>
+                            <TextBlock Grid.Column="2" Text="Autor"/>
+                            <TextBlock Grid.Column="4" Text="Rok wydania" />
 
-                            </Grid>
+                        </Grid>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
 
@@ -56,12 +56,11 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
-                    <Button x:Name="ButtonAdd" Content="Dodaj" Margin="84,10,10.4,10.4" Grid.Row="0" FontSize="13" Click="ButtonAdd_Click"/>
-                <Button x:Name="ButtonDelete" Content="Usuń" Margin="84,10,10.4,10.4" Grid.Row="1" FontSize="13" Click="ButtonDelete_Click"/>
-                <Button x:Name="ButtonEdit" Content="Edytuj" Margin="84,10,10.4,10.4" Grid.Row="2" FontSize="13" Click="ButtonEdit_Click"/>
-                <Button x:Name="ButtonShow" Content="Podgląd" Margin="84,10,10.4,10.4" Grid.Row="3" FontSize="13" Click="ButtonShow_Click"/>
-
-                </Grid>
+                <Button x:Name="ButtonAdd" Content="Dodaj" Margin="10 10 10 10" Grid.Row="0" FontSize="13" Click="ButtonAdd_Click"/>
+                <Button x:Name="ButtonDelete" Content="Usuń" Margin="10 10 10 10" Grid.Row="1" FontSize="13" Click="ButtonDelete_Click"/>
+                <Button x:Name="ButtonEdit" Content="Edytuj" Margin="10 10 10 10" Grid.Row="2" FontSize="13" Click="ButtonEdit_Click"/>
+                <Button Grid.Row="3" Content="Zamówienia" Margin="10 10 10 10" FontSize="13"></Button>
+            </Grid>
 
             </Grid>
 
