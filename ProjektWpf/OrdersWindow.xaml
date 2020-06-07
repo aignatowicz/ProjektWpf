@@ -21,28 +21,7 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="150"/>
             </Grid.ColumnDefinitions>
-            <ListBox Name="BoxList" Grid.Column="0" Margin="10 0 0 0">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <Grid Margin="0,0,0,0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="10" />
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="10" />
-                                <ColumnDefinition Width="*" />
-
-
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Grid.Column="0" Text="Imię i nazwisko"/>
-                            <TextBlock Grid.Column="2" Text="Książka"/>
-                            <TextBlock Grid.Column="4" Text="Email" />
-
-                        </Grid>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-
-            </ListBox>
+            <ListBox Name="orderList" Grid.Column="0" Margin="10 0 0 0" SelectionChanged="OrderList_SelectionChanged" />
 
             <Grid Grid.Column="1">
 
@@ -52,14 +31,13 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Button Grid.Row="0" Content="Zrealizuj" Margin="10 10 10 10"></Button>
-                <Button Grid.Row="1" Content="Edytuj" Margin="10 10 10 10"></Button>
+                <Button Name="finishOrderButton" IsEnabled="False" Grid.Row="0" Content="Zrealizuj" Margin="10 10 10 10" Click="Button_Click"></Button>
 
             </Grid>
 
         </Grid>
 
-        <Button x:Name="ButtonClose" Grid.Row="2" Margin="10,10,10,10" Content="Zamknij" FontSize="15" Click="ButtonClose_Click"/>
+        <Button x:Name="ButtonClose" Grid.Row="2" Margin="10,10,10,10" Content="Zamknij" FontSize="15" Click="ButtonClose_Click" />
 
     </Grid>
 

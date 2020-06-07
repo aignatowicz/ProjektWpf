@@ -18,7 +18,7 @@ namespace ProjektWpf
     /// <summary>
     /// Logika interakcji dla klasy Logowanie.xaml
     /// </summary>
-    public partial class Logowanie : Page
+    public partial class Logowanie : Window
     {
         public Logowanie()
         {
