@@ -32,6 +32,8 @@
                 </Grid.RowDefinitions>
 
                 <Button Name="finishOrderButton" IsEnabled="False" Grid.Row="0" Content="Zrealizuj" Margin="10 10 10 10" Click="Button_Click"></Button>
+              <Button Name="Print" IsEnabled="True" Grid.Row="1" Content="Drukuj" Margin="10 10 10 10" Click="Print_Click"></Button>
+
 
             </Grid>
 

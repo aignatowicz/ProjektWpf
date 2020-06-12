@@ -78,5 +78,13 @@ namespace ProjektWpf
             orders.Remove(order);
             orderList.Items.Refresh();
         }
+         private void Print_Click(object sender, RoutedEventArgs e)
+        {
+            PrintDialog printDialog = new PrintDialog();
+            if(printDialog.ShowDialog()==true)
+            {
+                printDialog.PrintVisual(orderList, "Trwa drukowanie");
+            }
+        }
     }
 }
